@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "678b88a9-d03c-48cb-b814-e3d4e0d99532",
+		"name": "Libros API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22527136"
+	},
+	"item": [
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\" : \"Piñon Fijo\",\r\n    \"autor\" : \"Marcos\",\r\n    \"categoria\" : \"Niños\",\r\n    \"ano_publicacion\" : \"2025\",\r\n    \"genero\" : \"Infantil\",\r\n    \"sinopsis\" : \"lorem 356\",\r\n    \"isbn\" : \"0000000001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/subir_libro",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subir_libro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/libros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"libros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOne",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id_libro\": 9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/un_libro",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"un_libro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_libro\": 7,\r\n    \"titulo\" : \"Piñon Fijo\",\r\n    \"autor\" : \"Marcos\",\r\n    \"categoria\" : \"Niños\",\r\n    \"ano_publicacion\" : \"2025\",\r\n    \"genero\" : \"Infantil\",\r\n    \"sinopsis\" : \"lorem 356\",\r\n    \"isbn\" : \"0000000001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/editar_libro",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"editar_libro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\" : \"0000000001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/borrar_libro",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"borrar_libro"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
